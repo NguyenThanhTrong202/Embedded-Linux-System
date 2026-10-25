@@ -1,0 +1,11 @@
+=== ARM GCC ===
+arm-linux-gnueabihf-gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+
+=== QEMU ===
+QEMU emulator version 10.2.1 (Debian 1:10.2.1+ds-1ubuntu3.2)
+
+=== MAKE ===
+GNU Make 4.4.1
+
+=== DTC ===
+Version: DTC 1.7.2
