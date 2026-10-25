@@ -1,0 +1,29 @@
+# Kernel build intermediates
+*.o
+*.mod
+*.mod.c
+*.cmd
+*.order
+Module.symvers
+modules.order
+
+# Build artifacts
+*.ko
+*.cpio
+*.cpio.gz
+*.tar.gz
+
+# External source trees
+linux-5.15/
+u-boot-2022.04/
+busybox-1.35.0/
+
+# Temporary files
+*.tmp
+*.swp
+*~
+.cache/
+
+# Editor files
+.vscode/
+.idea/
