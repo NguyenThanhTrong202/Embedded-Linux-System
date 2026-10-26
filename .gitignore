@@ -27,3 +27,10 @@ busybox-1.35.0/
 # Editor files
 .vscode/
 .idea/
+
+# LAB01 build output
+LAB01/
+
+# LAB01 Kernel source and build
+LAB01/sources/
+LAB01/build/
