@@ -9,11 +9,13 @@ echo " Embedded Linux LAB 01"
 echo " ARM Cortex-A9 | QEMU"
 echo "================================"
 
-mount -t proc proc /proc
-mount -t sysfs sysfs /sys
+mount -t proc none /proc
+mount -t sysfs none /sys
 
 echo "[LAB01] Initialization completed."
 
-exec /bin/sh
+exec /sbin/init
+
+
 
 
