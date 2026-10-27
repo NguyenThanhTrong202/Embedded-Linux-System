@@ -1,0 +1,27 @@
+make: Entering directory '/home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15'
+/home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15/scripts/mod/modpost.c: In function ‘match’:
+/home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15/scripts/mod/modpost.c:842:38: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  842 |                         char *here = strstr(sym, bare);
+      |                                      ^~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15/drivers/net/wireless/ralink/rt2x00/rt2x00dev.c: In function ‘rt2x00lib_rxdone_check_ba’:
+/home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15/drivers/net/wireless/ralink/rt2x00/rt2x00dev.c:624:22: warning: ‘ether_addr_equal_64bits’ reading 8 bytes from a region of size 6 [-Wstringop-overread]
+  624 |                 if (!ether_addr_equal_64bits(ba->ra, entry->ta))
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15/drivers/net/wireless/ralink/rt2x00/rt2x00dev.c:624:22: note: referencing argument 1 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
+/home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15/drivers/net/wireless/ralink/rt2x00/rt2x00dev.c:624:22: warning: ‘ether_addr_equal_64bits’ reading 8 bytes from a region of size 6 [-Wstringop-overread]
+/home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15/drivers/net/wireless/ralink/rt2x00/rt2x00dev.c:624:22: note: referencing argument 2 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
+In file included from /home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15/drivers/net/wireless/ralink/rt2x00/rt2x00.h:25,
+                 from /home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15/drivers/net/wireless/ralink/rt2x00/rt2x00dev.c:21:
+/home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15/include/linux/etherdevice.h:367:20: note: in a call to function ‘ether_addr_equal_64bits’
+  367 | static inline bool ether_addr_equal_64bits(const u8 addr1[6+2],
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15/drivers/net/wireless/ralink/rt2x00/rt2x00dev.c:627:22: warning: ‘ether_addr_equal_64bits’ reading 8 bytes from a region of size 6 [-Wstringop-overread]
+  627 |                 if (!ether_addr_equal_64bits(ba->ta, entry->ra))
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15/drivers/net/wireless/ralink/rt2x00/rt2x00dev.c:627:22: note: referencing argument 1 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
+/home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15/drivers/net/wireless/ralink/rt2x00/rt2x00dev.c:627:22: warning: ‘ether_addr_equal_64bits’ reading 8 bytes from a region of size 6 [-Wstringop-overread]
+/home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15/drivers/net/wireless/ralink/rt2x00/rt2x00dev.c:627:22: note: referencing argument 2 of type ‘const u8[8]’ {aka ‘const unsigned char[8]’}
+/home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15/include/linux/etherdevice.h:367:20: note: in a call to function ‘ether_addr_equal_64bits’
+  367 | static inline bool ether_addr_equal_64bits(const u8 addr1[6+2],
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~
+make: Leaving directory '/home/trong/Embedded-Linux-System/LAB01/sources/linux-5.15'
