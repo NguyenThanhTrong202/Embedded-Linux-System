@@ -1,0 +1,137 @@
+  GEN     /home/trong/Embedded-Linux-System/LAB01/build/busybox/Makefile
+  Using /home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0 as source for busybox
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/applets/usage.c: In function ‘main’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/applets/usage.c:52:17: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   52 |                 write(STDOUT_FILENO, usage_array[i].usage, strlen(usage_array[i].usage) + 1);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/libbb/appletlib.c: In function ‘check_suid’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/libbb/appletlib.c:638:17: warning: ignoring return value of ‘setgid’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  638 |                 setgid(rgid);
+      |                 ^~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/libbb/appletlib.c:639:17: warning: ignoring return value of ‘setuid’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  639 |                 setuid(ruid);
+      |                 ^~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/networking/tftp.c: In function ‘tftpd_main’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/networking/tftp.c:886:15: warning: ‘local_file’ is used uninitialized [-Wuninitialized]
+  886 |         char *local_file = local_file;
+      |               ^~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/networking/tftp.c:886:15: note: ‘local_file’ was declared here
+  886 |         char *local_file = local_file;
+      |               ^~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/printutils/lpr.c: In function ‘lpqr_main’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/printutils/lpr.c:125:27: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  125 |                 char *s = strchr(queue, '@');
+      |                           ^~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/printutils/lpr.c:272:17: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  272 |                 write(fd, "", 1); // send ACK
+      |                 ^~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/networking/wget.c: In function ‘retrieve_file_data’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/networking/wget.c:1085:33: warning: ignoring return value of ‘ftruncate’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1085 |                                 ftruncate(G.output_fd, pos);
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/procps/nmeter.c: In function ‘nmeter_main’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/procps/nmeter.c:904:27: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  904 |                         p = strchr(options, cur[0]);
+      |                           ^
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/procps/nmeter.c:919:27: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  919 |                         p = strchr(options, cur[0]);
+      |                           ^
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/procps/powertop.c: In function ‘is_hpet_irq’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/procps/powertop.c:272:11: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  272 |         p = strstr(name, "hpet");
+      |           ^
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/procps/powertop.c: In function ‘process_timer_stats’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/procps/powertop.c:432:27: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  432 |                         p = strchr(count, ',');
+      |                           ^
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/runit/runsv.c: In function ‘s_chld_term’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/runit/runsv.c:161:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  161 |         write(selfpipe.wr, "", 1);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/runit/runsv.c: In function ‘update_status’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/runit/runsv.c:203:25: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  203 |                         write(fd, spid, size);
+      |                         ^~~~~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/runit/runsv.c:244:17: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  244 |                 write(fd, stat_buf, p - stat_buf);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/procps/powertop.c: In function ‘read_cstate_counts’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/procps/powertop.c:181:34: warning: ‘%s’ directive writing up to 255 bytes into a region of size 171 [-Wformat-overflow=]
+  181 |                 sprintf(buf, "%s/%s/power", "/proc/acpi/processor", d->d_name);
+      |                                  ^~
+In file included from /usr/arm-linux-gnueabihf/include/stdio.h:974,
+                 from /home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/include/libbb.h:31,
+                 from /home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/procps/powertop.c:32:
+In function ‘sprintf’,
+    inlined from ‘read_cstate_counts’ at /home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/procps/powertop.c:181:3:
+/usr/arm-linux-gnueabihf/include/bits/stdio2.h:30:10: note: ‘__builtin___sprintf_chk’ output between 28 and 283 bytes into a destination of size 192
+   30 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   31 |                                   __glibc_objsize (__s), __fmt,
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   32 |                                   __va_arg_pack ());
+      |                                   ~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/procps/watch.c: In function ‘watch_main’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/procps/watch.c:115:17: warning: ignoring return value of ‘system’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  115 |                 system(cmd);
+      |                 ^~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/ash.c: In function ‘find_builtin’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/ash.c:10249:12: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+10249 |         bp = bsearch(
+      |            ^
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/ash.c: In function ‘decode_dollar_squote’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/ash.c:12313:11: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+12313 |         p = strchr(C_escapes, c);
+      |           ^
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/ash.c: In function ‘preadfd’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/ash.c:10790:25: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+10790 |                         write(STDOUT_FILENO, "^C", 2);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/hush.c: In function ‘o_addqchr’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/hush.c:3061:23: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 3061 |         char *found = strchr("*?[-\\" MAYBE_BRACES, ch);
+      |                       ^~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/hush.c: In function ‘expand_one_var’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/hush.c:6582:21: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 6582 |         exp_saveptr = arg[1] ? strchr(VAR_ENCODED_SUBST_OPS, arg[1]) : NULL;
+      |                     ^
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/hush.c: In function ‘get_user_input’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/hush.c:2669:17: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2669 |                 write(STDOUT_FILENO, "^C\n", 3);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/hush.c:2675:17: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2675 |                 write(STDOUT_FILENO, "\n", 1);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/hush.c: In function ‘expand_one_var’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/hush.c:6574:15: warning: ‘exp_word’ is used uninitialized [-Wuninitialized]
+ 6574 |         char *exp_word = exp_word; /* for compiler */
+      |               ^~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/shell/hush.c:6574:15: note: ‘exp_word’ was declared here
+ 6574 |         char *exp_word = exp_word; /* for compiler */
+      |               ^~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/util-linux/mdev.c: In function ‘make_device’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/util-linux/mdev.c:787:33: warning: ignoring return value of ‘chown’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  787 |                                 chown(node_name, rule->ugid.uid, rule->ugid.gid);
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/util-linux/mdev.c:790:33: warning: ignoring return value of ‘symlink’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  790 |                                 symlink(node_name, "root");
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/util-linux/mdev.c:797:41: warning: ignoring return value of ‘symlink’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  797 |                                         symlink(node_name, device_name);
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/util-linux/mkfs_minix.c: In function ‘get_list_blocks’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/util-linux/mkfs_minix.c:532:17: warning: ignoring return value of ‘fscanf’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  532 |                 fscanf(listfile, "%lu\n", &blockno);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/util-linux/unshare.c: In function ‘unshare_main’:
+/home/trong/Embedded-Linux-System/LAB01/sources/busybox-1.35.0/util-linux/unshare.c:295:25: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  295 |                         read(fdp.rd, ns_ctx_list, 1); /* ...using bogus buffer */
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Static linking against glibc, can't use --gc-sections
+Trying libraries: m resolv rt
+ Library m is needed, can't exclude it (yet)
+ Library resolv is needed, can't exclude it (yet)
+ Library rt is not needed, excluding it
+ Library m is needed, can't exclude it (yet)
+ Library resolv is needed, can't exclude it (yet)
+Final link with: m resolv
