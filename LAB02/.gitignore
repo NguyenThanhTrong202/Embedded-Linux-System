@@ -1,0 +1,17 @@
+
+# BusyBox generated files
+/rootfs/initramfs/bin/
+/rootfs/initramfs/sbin/
+/rootfs/initramfs/usr/bin/
+/rootfs/initramfs/usr/sbin/
+/rootfs/initramfs/linuxrc
+
+# Kernel module build files
+/driver/*.o
+/driver/*.ko
+/driver/*.mod
+/driver/*.mod.c
+/driver/.*.cmd
+/driver/Module.symvers
+/driver/modules.order
+/driver/.tmp_versions/
