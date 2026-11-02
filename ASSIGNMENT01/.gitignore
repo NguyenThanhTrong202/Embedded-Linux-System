@@ -1,0 +1,16 @@
+
+# Build outputs
+/build/
+*.o
+*.ko
+*.mod
+*.mod.c
+*.cmd
+Module.symvers
+modules.order
+.tmp_versions/
+
+# Compiled test programs
+/task1_ioctl/test_stats
+/task1_ioctl/test_version
+/task1_ioctl/test_reset
