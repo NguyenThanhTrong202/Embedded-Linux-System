@@ -33,3 +33,20 @@ modules.order
 /task1_ioctl/test_stats
 /task1_ioctl/test_version
 /task1_ioctl/test_reset
+
+# Generated files
+/build/
+*.o
+*.ko
+*.mod
+*.mod.c
+*.cmd
+Module.symvers
+modules.order
+.tmp_versions/
+
+# Executables
+/task1_ioctl/test_asgn1
+/task1_ioctl/test_stats
+/task1_ioctl/test_version
+/task1_ioctl/test_reset
