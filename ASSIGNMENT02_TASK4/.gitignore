@@ -1,0 +1,11 @@
+/output/
+/app/sms_app
+/app/sms_app_x86
+/driver/*.o
+/driver/*.ko
+/driver/*.mod
+/driver/*.mod.c
+/driver/.*.cmd
+/driver/Module.symvers
+/driver/modules.order
+/driver/.tmp_versions/
