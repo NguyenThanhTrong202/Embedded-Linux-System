@@ -1,0 +1,4 @@
+=== LAB03 Debugging ===
+Sum = 150
+Message: Embedded Linux
+Result = 10000000000

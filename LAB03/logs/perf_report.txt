@@ -1,0 +1,234 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 27  of event 'cpu-clock'
+# Event count (approx.): 272727270
+#
+# Children      Self  Command      Shared Object     Symbol                         
+# ........  ........  ...........  ................  ...............................
+#
+    48.15%    48.15%  perf_target  perf_target       [.] heavy_compute
+            |          
+            |--3.70%--0x40f5f44000000000
+            |          heavy_compute
+            |          
+            |--3.70%--0x40f476b000000000
+            |          heavy_compute
+            |          
+            |--3.70%--0x40eddea000000000
+            |          heavy_compute
+            |          
+            |--3.70%--0x40ec876000000000
+            |          heavy_compute
+            |          
+            |--3.70%--0x40ea784000000000
+            |          heavy_compute
+            |          
+            |--3.70%--0x40e715c000000000
+            |          heavy_compute
+            |          
+            |--3.70%--0x40e67f0000000000
+            |          heavy_compute
+            |          
+            |--3.70%--0x40d495c000000000
+            |          heavy_compute
+            |          
+            |--3.70%--0x40c7998000000000
+            |          heavy_compute
+            |          
+            |--3.70%--0x40c2860000000000
+            |          heavy_compute
+            |          
+            |--3.70%--0x40c1a50000000000
+            |          heavy_compute
+            |          
+            |--3.70%--0x40c0b80000000000
+            |          heavy_compute
+            |          
+             --3.70%--0x40b7ad0000000000
+                       heavy_compute
+
+    33.33%    33.33%  perf_target  libm.so.6         [.] __ieee754_log_fma
+            |          
+            |--3.70%--0x40f53e1000000000
+            |          __ieee754_log_fma
+            |          
+            |--3.70%--0x40f4489000000000
+            |          __ieee754_log_fma
+            |          
+            |--3.70%--0x40f09cc000000000
+            |          __ieee754_log_fma
+            |          
+            |--3.70%--0x40ef890000000000
+            |          __ieee754_log_fma
+            |          
+            |--3.70%--0x40e3a7c000000000
+            |          __ieee754_log_fma
+            |          
+            |--3.70%--0x40e2418000000000
+            |          __ieee754_log_fma
+            |          
+            |--3.70%--0x40d8ccc000000000
+            |          __ieee754_log_fma
+            |          
+            |--3.70%--0x40d0d9c000000000
+            |          __ieee754_log_fma
+            |          
+             --3.70%--0x40b3090000000000
+                       __ieee754_log_fma
+
+     7.41%     7.41%  perf_target  libm.so.6         [.] __log_finite@GLIBC_2.15@plt
+            |          
+            |--3.70%--0x40f14dd000000000
+            |          __log_finite@GLIBC_2.15@plt
+            |          
+             --3.70%--0x40de920000000000
+                       __log_finite@GLIBC_2.15@plt
+
+     7.41%     7.41%  perf_target  perf_target       [.] linear_search
+            |
+            ---0x300000002
+               linear_search
+
+     7.41%     0.00%  perf_target  [unknown]         [.] 0x0000000300000002
+            |
+            ---0x300000002
+               linear_search
+
+     3.70%     3.70%  perf_target  perf_target       [.] log@plt
+            |
+            ---0x40c53a0000000000
+               log@plt
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40b3090000000000
+            |
+            ---0x40b3090000000000
+               __ieee754_log_fma
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40b7ad0000000000
+            |
+            ---0x40b7ad0000000000
+               heavy_compute
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40c0b80000000000
+            |
+            ---0x40c0b80000000000
+               heavy_compute
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40c1a50000000000
+            |
+            ---0x40c1a50000000000
+               heavy_compute
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40c2860000000000
+            |
+            ---0x40c2860000000000
+               heavy_compute
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40c53a0000000000
+            |
+            ---0x40c53a0000000000
+               log@plt
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40c7998000000000
+            |
+            ---0x40c7998000000000
+               heavy_compute
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40d0d9c000000000
+            |
+            ---0x40d0d9c000000000
+               __ieee754_log_fma
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40d495c000000000
+            |
+            ---0x40d495c000000000
+               heavy_compute
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40d8ccc000000000
+            |
+            ---0x40d8ccc000000000
+               __ieee754_log_fma
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40de920000000000
+            |
+            ---0x40de920000000000
+               __log_finite@GLIBC_2.15@plt
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40e2418000000000
+            |
+            ---0x40e2418000000000
+               __ieee754_log_fma
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40e3a7c000000000
+            |
+            ---0x40e3a7c000000000
+               __ieee754_log_fma
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40e67f0000000000
+            |
+            ---0x40e67f0000000000
+               heavy_compute
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40e715c000000000
+            |
+            ---0x40e715c000000000
+               heavy_compute
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40ea784000000000
+            |
+            ---0x40ea784000000000
+               heavy_compute
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40ec876000000000
+            |
+            ---0x40ec876000000000
+               heavy_compute
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40eddea000000000
+            |
+            ---0x40eddea000000000
+               heavy_compute
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40ef890000000000
+            |
+            ---0x40ef890000000000
+               __ieee754_log_fma
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40f09cc000000000
+            |
+            ---0x40f09cc000000000
+               __ieee754_log_fma
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40f14dd000000000
+            |
+            ---0x40f14dd000000000
+               __log_finite@GLIBC_2.15@plt
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40f4489000000000
+            |
+            ---0x40f4489000000000
+               __ieee754_log_fma
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40f476b000000000
+            |
+            ---0x40f476b000000000
+               heavy_compute
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40f53e1000000000
+            |
+            ---0x40f53e1000000000
+               __ieee754_log_fma
+
+     3.70%     0.00%  perf_target  [unknown]         [.] 0x40f5f44000000000
+            |
+            ---0x40f5f44000000000
+               heavy_compute
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

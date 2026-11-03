@@ -1,0 +1,5 @@
+$15 = 100000
+$16 = 100000
+$17 = 10000000000
+#0  calculate (a=100000, b=100000) at LAB03/apps/buggy_app.c:36
+#1  0x00010488 in main () at LAB03/apps/buggy_app.c:53
