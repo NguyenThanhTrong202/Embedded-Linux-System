@@ -1,0 +1,92 @@
+Already logging to ASSIGNMENT02_TASK1_COMPLETE/logs/task3/gdb_session.txt.
+Breakpoint 1 at 0x4d2f: file circular_buffer.c, line 47.
+Breakpoint 2 at 0x4e5a: file circular_buffer.c, line 65.
+No threads.
+❌️ No symbol "b" in current context.
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x0000000000004d2f in cb_push at circular_buffer.c:47
+2       breakpoint     keep y   0x0000000000004e5a in cb_pop at circular_buffer.c:65
+Starting program: /home/trong/Embedded-Linux-System/ASSIGNMENT02_TASK1_COMPLETE/app/sms_app_x86 -p /tmp/sms_task3.csv -i 100 -d 30 -v
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+Downloading 53.04 K separate debug info for system-supplied DSO at 0x7ffff7fbe000
+[########################################################################################################################                                                                                           ]  57% (53.04 K)[########################################################################################################################                                                                                           ]  57% (53.04 K)[########################################################################################################################                                                                                           ]  57% (53.04 K)[###################################################################################################################################################################################################################] 100% (53.04 K)                                                                                                                                                                                                                                      [Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff7bff6c0 (LWP 22741)]
+[New Thread 0x7ffff73fe6c0 (LWP 22742)]
+[New Thread 0x7ffff6bfd6c0 (LWP 22743)]
+[Switching to Thread 0x7ffff6bfd6c0 (LWP 22743)]
+
+Thread 4 "sms_app_x86" hit Breakpoint 2, cb_pop (b=0x7ffffffed940, sample=0x7ffff6bfccc0) at circular_buffer.c:65
+65	    pthread_mutex_lock(&b->lock);
+[New Thread 0x7ffff63fc6c0 (LWP 22744)]
+[Switching to Thread 0x7ffff63fc6c0 (LWP 22744)]
+
+Thread 5 "sms_app_x86" hit Breakpoint 1, cb_push (b=0x7ffffffed940, sample=...) at circular_buffer.c:47
+47	    int ok = 0;
+❌️ A syntax error in expression, near `print b->tail
+print b->size'.
+❌️ A syntax error in expression, near `print b->tail
+print b->size'.
+$1 = 0
+$2 = 0
+$3 = 0
+  Id   Target Id                                       Frame
+  1    Thread 0x7ffff7fa2740 (LWP 22732) "sms_app_x86" __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+  2    Thread 0x7ffff7bff6c0 (LWP 22741) "sms_app_x86" __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+  3    Thread 0x7ffff73fe6c0 (LWP 22742) "sms_app_x86" __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+  4    Thread 0x7ffff6bfd6c0 (LWP 22743) "sms_app_x86" 0x0000555555558e62 in cb_pop (b=0x7ffffffed940, sample=0x7ffff6bfccc0) at circular_buffer.c:65
+* 5    Thread 0x7ffff63fc6c0 (LWP 22744) "sms_app_x86" cb_push (b=0x7ffffffed940, sample=...) at circular_buffer.c:47
+
+Thread 5 (Thread 0x7ffff63fc6c0 (LWP 22744) "sms_app_x86"):
+#0  cb_push (b=0x7ffffffed940, sample=...) at circular_buffer.c:47
+#1  0x00005555555578e3 in sensor_thread_main (ptr=0x7ffffffed820) at sensor_thread.c:73
+#2  0x00007ffff7ca3dfa in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:454
+#3  0x00007ffff7d375cc in __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 4 (Thread 0x7ffff6bfd6c0 (LWP 22743) "sms_app_x86"):
+#0  0x0000555555558e62 in cb_pop (b=0x7ffffffed940, sample=0x7ffff6bfccc0) at circular_buffer.c:65
+#1  0x00005555555580b7 in processor_thread_main (ptr=0x7ffffffed820) at processor_thread.c:37
+#2  0x00007ffff7ca3dfa in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:454
+#3  0x00007ffff7d375cc in __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 3 (Thread 0x7ffff73fe6c0 (LWP 22742) "sms_app_x86"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca039c in __internal_syscall_cancel (a1=<optimized out>, a2=<optimized out>, a3=<optimized out>, a4=<optimized out>, a5=<optimized out>, a6=0, nr=243) at ./nptl/cancellation.c:49
+#2  __syscall_cancel (a1=<optimized out>, a2=<optimized out>, a3=<optimized out>, a4=<optimized out>, a5=<optimized out>, a6=a6@entry=0, nr=243) at ./nptl/cancellation.c:75
+#3  0x00007ffff7caff3c in ___mq_timedreceive_time64 (mqdes=<optimized out>, msg_ptr=<optimized out>, msg_len=<optimized out>, msg_prio=<optimized out>, abs_timeout=<optimized out>) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:35
+#4  0x0000555555558205 in alert_thread_main (ptr=0x7ffffffed820) at alert_thread.c:25
+(More stack frames follow...)
+
+Thread 2 (Thread 0x7ffff7bff6c0 (LWP 22741) "sms_app_x86"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca030c in __internal_syscall_cancel (a1=a1@entry=140737488345680, a2=<optimized out>, a3=a3@entry=48, a4=a4@entry=140737219931424, a5=a5@entry=0, a6=a6@entry=4294967295, nr=202) at ./nptl/cancellation.c:49
+#2  0x00007ffff7ca06e7 in __futex_abstimed_wait_common64 (private=0, futex_word=0x7fffffffda50, expected=48, op=8388233, abstime=0x7ffff0002d20, cancel=true) at ./nptl/futex-internal.c:57
+#3  __futex_abstimed_wait_common (futex_word=0x7fffffffda50, expected=48, clockid=32767, abstime=0x7ffff0002d20, private=0, cancel=true) at ./nptl/futex-internal.c:87
+#4  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7fffffffda50, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x7ffff7bfec80, private=private@entry=0) at ./nptl/futex-internal.c:139
+(More stack frames follow...)
+
+Thread 1 (Thread 0x7ffff7fa2740 (LWP 22732) "sms_app_x86"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca030c in __internal_syscall_cancel (a1=a1@entry=0, a2=a2@entry=0, a3=<optimized out>, a4=<optimized out>, a5=a5@entry=0, a6=a6@entry=0, nr=230) at ./nptl/cancellation.c:49
+#2  0x00007ffff7cf5af2 in __GI___clock_nanosleep (clock_id=<optimized out>, clock_id@entry=0, flags=flags@entry=0, req=<optimized out>, rem=<optimized out>) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:48
+#3  0x00007ffff7d03707 in __GI___nanosleep (req=<optimized out>, rem=<optimized out>) at ../sysdeps/unix/sysv/linux/nanosleep.c:25
+#4  0x0000555555557112 in main (argc=8, argv=0x7fffffffdc08) at sms_app.c:135
+Continuing.
+[Thread 0x7ffff63fc6c0 (LWP 22744) exited]
+[Switching to Thread 0x7ffff6bfd6c0 (LWP 22743)]
+
+Thread 4 "sms_app_x86" hit Breakpoint 2, cb_pop (b=0x7ffffffed940, sample=0x7ffff6bfccc0) at circular_buffer.c:65
+65	    pthread_mutex_lock(&b->lock);
+66	    while (b->size == 0 && !b->closed)
+$4 = 1
+$5 = 1
+$6 = 0
+Continuing.
+[Thread 0x7ffff6bfd6c0 (LWP 22743) exited]
+[Thread 0x7ffff73fe6c0 (LWP 22742) exited]
+[Thread 0x7ffff7bff6c0 (LWP 22741) exited]
+[Inferior 1 (process 22732) exited normally]
