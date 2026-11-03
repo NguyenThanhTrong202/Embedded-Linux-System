@@ -1,0 +1,4 @@
+[    7.347188] sms_sensor_driver: loading out-of-tree module taints kernel.
+[    7.358507] sms_sensor: loaded major=10 minor=124
+[    7.448108] sms_sensor: sampling interval=500 ms
+[    8.527487] sms_sensor: sampling interval=500 ms

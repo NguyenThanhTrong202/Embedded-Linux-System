@@ -1,0 +1,4 @@
+[demo] regular CSV input, ioctl unavailable
+SMS started: interval=500ms duration=12s device=/tmp/sms_sensor_mock.2sGNGn
+[sensor] SCHED_FIFO unavailable (Operation not permitted); using normal scheduling
+SUMMARY samples=23 processed=23 produced=23 consumed=23 overflow=0 alerts: TEMP_HIGH=0 HUMID_HIGH=0 TEMP_SPIKE=0 log=/tmp/sms.log

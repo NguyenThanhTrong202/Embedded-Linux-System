@@ -1,0 +1,9 @@
+T=30s
+PID=86
+Name:	sms_app
+State:	S (sleeping)
+VmPeak:	   35592 kB
+VmSize:	   34568 kB
+VmHWM:	       4 kB
+VmRSS:	       4 kB
+Threads:	5

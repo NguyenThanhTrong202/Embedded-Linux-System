@@ -1,0 +1,11 @@
+PASS ioctl SMS_SET_INTERVAL=500ms
+PASS ioctl rejects invalid interval=0 (EINVAL)
+PASS CSV 8458,41.7,44.4
+PASS early read -> EAGAIN
+=== /proc/sms_stats ===
+read_count: 1
+last_temperature: 41.7
+last_humidity: 44.4
+driver_uptime_seconds: 1
+interval_ms: 500
+PASS: driver ioctl + device CSV + procfs

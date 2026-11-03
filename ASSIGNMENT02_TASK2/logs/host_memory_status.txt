@@ -1,0 +1,8 @@
+Name:	sms_app_x86
+State:	S (sleeping)
+VmPeak:	  232176 kB
+VmSize:	  166640 kB
+VmHWM:	    2232 kB
+VmRSS:	    2232 kB
+Threads:	5
+Host pid=7913, fd_count=5
