@@ -1,42 +1,70 @@
-#Embedded Linux Systems
+# Embedded Linux System
 
-This repository contains Embedded Linux coursework
-ARM Cortex-A9 using QEMU.
+A collection of Embedded Linux labs and assignments developed on Ubuntu, targeting ARMv7 Cortex-A9 using QEMU.
 
-#Development Environment
+## Development Environment
 
-- Host OS: Ubuntu Linux
-- Target Architecture: ARMv7-A
-- Target CPU: Cortex-A9
-- Emulator: QEMU vexpress-a9
-- Cross Compiler: arm-linux-gnueabihf-
+| Component | Technology |
+|-----------|------------|
+| Host OS | Ubuntu Linux |
+| Target | ARMv7 Cortex-A9 |
+| Kernel | Linux 5.15 |
+| Emulator | QEMU vexpress-a9 |
+| Toolchain | arm-linux-gnueabihf-gcc |
+| Language | C |
 
-## Projects
+## Labs & Assignments
 
-### LAB 01
-Build an Embedded Linux system using:
-- Linux Kernel 5.15
-- U-Boot 2022.04
-- BusyBox 1.35.0
-- Initramfs
-- QEMU
+| Project | Description | Status |
+|---------|-------------|--------|
+| [LAB01](LAB01/) | Linux Kernel, U-Boot, BusyBox and Root Filesystem | Completed |
+| [LAB02](LAB02/) | Character Device Driver and File Operations | Completed |
+| [LAB03](LAB03/) | GDB Debugging, Valgrind, strace, perf and cyclictest | Completed |
+| [Assignment 01](ASSIGNMENT01/) | ioctl Interface and Misc Counter Driver | Completed |
+| Assignment 02 | Multithreaded Sensor Monitoring System | Tasks 1–4 Completed |
 
-### LAB 02
-Linux Device Driver and File Systems:
-- Character Device Driver
-- procfs and sysfs
-- MTD and JFFS2
-- BusyBox Init
+## LAB03 - Debugging & Performance
 
-### Assignment 01
-How to Write a Device Driver:
-- ioctl Interface
-- Misc Counter Device
+LAB03 covers four main exercises:
 
-### Assignment 02
-To be implemented according to assignment requirements.
+| Part | Tool | Description |
+|------|------|-------------|
+| A | GDB + QEMU | Debug ARM applications and fix common bugs |
+| B | Valgrind | Detect and fix memory leaks |
+| C | strace / perf | Analyze system calls and CPU performance |
+| D | cyclictest | Measure real-time latency |
 
-## Development Workflow
+## Assignment 02 - Sensor Monitoring
 
-Each meaningful development step is documented
-through Git commits.
+A sensor monitoring application using:
+
+- Linux Kernel Driver
+- POSIX Threads and Message Queues
+- Circular Buffer with Mutex
+- Temperature and Humidity Monitoring
+- Logging and Alert System
+- Real-Time Scheduling and Jitter Analysis
+
+## Quick Start
+
+Build the sensor monitoring application:
+
+```bash
+make -C ASSIGNMENT02_TASK1_COMPLETE/app host
+```
+
+Run the host tests:
+
+```bash
+bash ASSIGNMENT02_TASK1_COMPLETE/scripts/test_host.sh
+```
+
+Build and test LAB03 ARM application:
+
+```bash
+qemu-arm ./LAB03/apps/buggy_app_fixed
+```
+
+---
+
+**Embedded Linux Systems | ARMv7 | Linux Kernel | Device Drivers**
